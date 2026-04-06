@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Campus Resource Sharing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Campus Resource Sharing</h1>
+
+    <!-- Top Controls -->
+    <div class="top-bar">
+      <!-- <button onclick="toggleDarkMode()" class="dark-toggle">
+        🌙 Toggle Mode
+      </button> -->
+
+      <!-- <select id="filter" onchange="filterCategory()">
+        <option value="">All</option>
+        <option value="book">Book</option>
+        <option value="laptop">Laptop</option>
+        <option value="calculator">Calculator</option>
+      </select> -->
+    </div>
+
+    <!-- Form -->
+    <div class="form-card">
+      <input type="text" id="name" placeholder="Item Name">
+      <input type="text" id="category" placeholder="Category">
+      <input type="text" id="contact" placeholder="Contact">
+      <button onclick="addItem()">Add Item</button>
+    </div>
+
+    <!-- Search -->
+    <input type="text" id="search" placeholder="Search items..." onkeyup="searchItem()">
+
+    <!-- Items -->
+    <div id="items"></div>
+
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span onclick="closeModal()" class="close">&times;</span>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
