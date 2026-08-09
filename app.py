@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import sqlite3
 
@@ -23,9 +23,7 @@ def init_db():
 init_db()
 @app.route('/')
 def home():
-    return jsonify({
-        "message": "Campus Resource Sharing API is running"
-    })
+    return render_template('index.html')
 
 # Add item
 @app.route('/add', methods=['POST'])
