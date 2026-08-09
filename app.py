@@ -21,6 +21,11 @@ def init_db():
     conn.close()
 
 init_db()
+@app.route('/')
+def home():
+    return jsonify({
+        "message": "Campus Resource Sharing API is running"
+    })
 
 # Add item
 @app.route('/add', methods=['POST'])
